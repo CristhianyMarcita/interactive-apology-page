@@ -1,297 +1,324 @@
-# 💔➡️❤️ I'm Sorry - The Ultimate Apology Page
 
-<div align="center">
-
-![Love Status](https://img.shields.io/badge/Love_Status-Apologizing-ff69b4?style=for-the-badge)
-![Forgiveness Level](https://img.shields.io/badge/Forgiveness-Pending-e73c7e?style=for-the-badge)
-![Button Difficulty](https://img.shields.io/badge/Button-Impossible_to_Click-ffb6c1?style=for-the-badge)
-![Made With](https://img.shields.io/badge/Made_With-Love_❤️-ff1493?style=for-the-badge)
-
-### *Because sometimes "I'm sorry" just isn't enough... you need interactive entertainment!* 🎭
-
-
----
-
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Pleading%20Face.png" width="150" />
-
-### The most FUN way to say sorry! 🎉
-
-*Turn your apology into an unforgettable interactive experience!*
-
-</div>
-
-🔗 Too lazy to deploy? Use mine!
-Just share this link: https://thiswasaryan.github.io/interactive-apology-page/
-Perfect for emergencies when you need to apologize RIGHT NOW! ⚡💕
-
----
-
-## 🌟 What is This Magical Creation?
-
-Ever messed up and need to apologize? Why send a boring text when you can send an **INTERACTIVE APOLOGY WEBPAGE** that literally won't let them say no? 😏
-
-This isn't just an apology - it's a **whole experience**! Watch as the "No" button:
-- 🏃‍♂️ **Runs away** from their cursor/finger
-- 📉 **Shrinks** with every attempt to click it
-- 💫 **Sparkles** as it dodges their clicks
-- 🎯 Makes them work for that "No" (spoiler: they'll give up and click "Yes"!)
-
-Meanwhile, the "Yes" button? Gets **BIGGER** and **MORE TEMPTING** with every failed attempt! 
-
----
-
-## ✨ Features That'll Make Them Smile
-
-### 🎨 **Stunning Visuals**
-- 🌈 Animated gradient background that flows like your love
-- 💖 Floating hearts that dance across the screen
-- ✨ Sparkle effects when the button escapes
-- 🎭 Shake animations on text
-- 💃 Bouncing emoji celebrations
-
-### 🎮 **Interactive Gameplay** (Yes, it's basically a game!)
-- 🖱️ **Desktop Mode**: Button runs away when you hover near it
-- 📱 **Mobile Mode**: Button jumps away when tapped
-- 📏 Shrinks with every attempt (starts at 100%, can go down to 30%!)
-- 🎯 Smart collision detection - never overlaps with "Yes" button
-- 💪 15+ unique apology messages that cycle through
-
-### 🧠 **Smart Features**
-- 📱 Fully responsive - works perfectly on phones and computers
-- 🎯 Anti-overlap algorithm ensures buttons never stack
-- 🔄 Attempt counter with encouraging (desperate) messages
-- 💝 Victory celebration with floating hearts
-- 🎊 Emoji explosion when forgiven
-
----
-
-## 🚀 Installation
-
-### Option 1: GitHub Pages (Recommended - FREE!)
-
-1. **Fork this repo** ⭐
-2. Go to **Settings** → **Pages**
-3. Select **main branch** as source
-4. Wait 2 minutes ⏰
-5. Your page will be live at: `https://yourusername.github.io/interactive-apology-page/`
-6. **Send the link** and watch the magic happen! ✨
-
-### Option 2: Download & Open Locally
-
-```bash
-# Clone this repo
-git clone https://github.com/thiswasaryan/interactive-apology-page.git
-
-# Open the file
-cd interactive-apology-page
-open index.html  # Mac
-start index.html # Windows
-xdg-open index.html # Linux
-```
-
-### Option 3: Netlify Drop (Super Easy!)
-
-1. Go to [Netlify Drop](https://app.netlify.com/drop)
-2. Drag & drop `index.html`
-3. Get your instant URL! 🎉
-
----
-
-## 📱 How It Works
-
-### **Desktop Experience** 🖥️
-
-```
-User hovers near "No" button
-      ↓
-Button: "NOPE! ✨" *jumps away*
-      ↓
-Button gets smaller
-      ↓
-Message changes: "I'm so sorry baby! 😭"
-      ↓
-"Yes" button grows bigger
-      ↓
-User gives up and clicks "Yes" 
-      ↓
-🎉 CELEBRATION TIME! 🎉
-```
-
-### **Mobile Experience** 📱
-
-```
-User taps "No" button
-      ↓
-Button: "Ha! Missed me! 💨"
-      ↓
-Button shrinks by 10%
-      ↓
-New apology appears
-      ↓
-Repeat until they give up
-      ↓
-Victory! ❤️
-```
-
----
-
-## 🎭 The Messages
-
-The page cycles through **15 heartfelt apology messages** including:
-
-- 💕 "I promise I'll never do it again"
-- 🌍 "You mean the world to me"
-- 🍦 "Forgive me please? I'll buy you ice cream"
-- 💍 "I'll never let you down again, I promise"
-- And many more!
-
----
-
-## 🛠️ Customization
-
-Want to personalize it? Easy! Just edit these sections in `index.html`:
-
-### Change the Messages
-```javascript
-const sorryMessages = [
-    "Your custom message here ❤️",
-    "Another sweet apology 💕",
-    // Add as many as you want!
-];
-```
-
-### Adjust Button Difficulty
-```javascript
-// Make it easier (shrinks slower)
-const newScale = Math.max(0.3, 1 - (noClickCount * 0.05)); // Changed from 0.1
-
-// Make it IMPOSSIBLE (shrinks faster)
-const newScale = Math.max(0.2, 1 - (noClickCount * 0.15));
-```
-
-### Change Colors
-```css
-/* Main gradient */
-background: linear-gradient(-45deg, #yourcolor1, #yourcolor2, #yourcolor3);
-
-/* Button colors */
-#yesBtn {
-    background: linear-gradient(135deg, #yourcolor1, #yourcolor2);
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe8f1">
+<title>Perdóname, Marcita 💗</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--pink:#e94f91;--deep:#bd3974;--soft:#fff1f7;--ink:#71364f}
+body{
+  min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;
+  padding:22px;overflow-x:hidden;position:relative;color:var(--ink);
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  background:linear-gradient(-45deg,#ffd2e5,#fff0f7,#ffc2dd,#ffe8f1);
+  background-size:400% 400%;animation:bg 14s ease infinite;
 }
-```
+@keyframes bg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.bg-heart{position:fixed;opacity:.25;pointer-events:none;font-size:28px;animation:drift 12s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(30px,-45px) rotate(18deg)}}
+.card{
+  width:min(680px,100%);position:relative;z-index:2;text-align:center;padding:clamp(24px,5vw,46px);
+  background:rgba(255,255,255,.95);border:2px solid #ffd0e3;border-radius:30px;
+  box-shadow:0 22px 70px #b83b7426;animation:appear .8s ease-out;
+}
+@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.kitty{font-size:clamp(42px,9vw,66px);margin-bottom:10px}
+h1{color:var(--pink);font-size:clamp(27px,6vw,43px);line-height:1.2;margin:8px 0 18px}
+p{font-size:clamp(15px,2.7vw,18px);line-height:1.75;margin:0 auto 18px}
+.buttons{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;min-height:105px;position:relative;margin:10px 0}
+button{font:700 16px "Trebuchet MS",Arial,sans-serif;border:0;border-radius:999px;padding:15px 23px;cursor:pointer;box-shadow:0 6px 0 #00000010;transition:transform .2s,box-shadow .2s}
+button:focus-visible{outline:3px solid #8e3b67;outline-offset:4px}
+#yesBtn,.next{background:linear-gradient(135deg,#f28fba,#dc4384);color:#fff}
+#yesBtn:hover,.next:hover{transform:translateY(-3px);box-shadow:0 9px 18px #e94f9140}
+#noBtn{background:#ffe0ed;color:#a83d70;border:1px solid #f8bfd7;position:relative;z-index:4}
+.small{font-size:12px;color:#b27b96;margin-top:12px}
+#clickCount{min-height:30px;color:#ca4380;font-weight:700;font-size:14px;margin:10px 0}
+.hidden{display:none!important}
+.letter{text-align:left;background:#fff5f9;border:1px dashed #ee9dc0;border-radius:20px;padding:20px;margin:18px 0;max-height:48vh;overflow:auto}
+.letter p{font-size:15px;margin-bottom:13px}
+.letter p:last-child{margin-bottom:0}
+.letter strong{color:#c83d7d}
+#emojiContainer{font-size:clamp(27px,7vw,44px);line-height:1.7;margin-top:18px;animation:bounce 1.2s ease-in-out infinite}
+@keyframes bounce{50%{transform:translateY(-8px)}}
+.heart{position:fixed;z-index:10;pointer-events:none;font-size:25px;animation:up 3.5s ease-out forwards}
+@keyframes up{to{transform:translateY(-105vh) rotate(30deg);opacity:0}}
+@media(max-width:480px){
+  .card{padding:24px 17px;border-radius:24px}
+  .buttons{min-height:130px;gap:10px}
+  button{font-size:14px;padding:13px 17px}
+  .letter{padding:15px;max-height:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition:none!important}
+}
+</style>
+</head>
+<body>
 
----
+<div class="bg-heart" style="top:8%;left:8%">💗</div>
+<div class="bg-heart" style="top:75%;left:84%;animation-delay:2s">♡</div>
+<div class="bg-heart" style="top:20%;right:10%;animation-delay:4s">💕</div>
+<div class="bg-heart" style="bottom:12%;left:12%;animation-delay:1s">💖</div>
 
-## 🎯 Pro Tips
+<main class="card">
+  <div class="kitty" id="kitty" aria-hidden="true">🐰💗</div>
 
-1. 🎬 **Test it first!** Make sure it works on your device
-2. 📱 **Send directly to their phone** - Mobile experience is *chef's kiss*
-3. ⏰ **Timing matters** - Send it when they're in a good mood
-4. 💬 **Add a personal message** in the first line
-5. 🎥 **Screen record their reaction** (with permission!) - it'll be hilarious
+  <section id="ask">
+    <h1 id="mainText">¿Me perdonas, Marcita? 🥺💗</h1>
+    <p>
+      Fan de snoopy, hice esta paginita solo para ti.
+      Tengo algo que decirte y espero que puedas leerlo
+      con un poquito de cariño. ♡
+    </p>
 
----
+    <div class="buttons" id="buttons">
+      <button id="yesBtn">Sí, te perdono :33💖</button>
+      <button id="noBtn">Todavía no 😾</button>
+    </div>
 
-## 🤔 FAQ
+    <div id="clickCount"></div>
+    <div class="small">El botoncito «Todavía no» es un poquito tímido… 🙈</div>
+  </section>
 
-**Q: Will this actually work?**  
-A: 87% success rate according to our *totally real* studies! 📊
+  <section id="apology" class="hidden" aria-live="polite">
+    <h1>Perdón, princesa bonita 💌</h1>
 
-**Q: What if they still click "No"?**  
-A: They have to chase that button around the screen first. By the time they catch it, they'll be laughing too hard to stay mad! 😂
+    <div class="letter">
+      <p>
+        Marcita, quiero pedirte perdón por lo de hace unos días.
+        Habíamos quedado en jugar Roblox y yo de verdad quería
+        pasar ese ratito contigo. Estaba esperando que mi papá
+        se vaya y te dejé en visto y al final, sin darme cuenta,
+        me quedé dormido como media hora. Perdón :c
+      </p>
 
-**Q: Is this manipulative?**  
-A: It's *playfully persuasive*! Plus, the "No" button still works... eventually... if they're persistent enough! 😅
+      <p>
+        Cuando desperté y vi que te había dejado esperando,
+        me desesperé y te escribí enseguida, pero tú ya te habías
+        ido a dormir. Después nuestros horarios se cruzaron de
+        la manera más cruel: tú despertaste a las seis y yo
+        terminé durmiéndome justo a esa hora. JAJAJA, nuestros
+        horarios nos trolearon horrible. 😭
+      </p>
 
-**Q: Can I use this for serious apologies?**  
-A: Depends on what you did! Forgot an anniversary? Perfect! Crashed their car? Maybe send flowers first... 🌹
+      <p>
+        Entiendo que te hayas molestado, bonita. Aunque no lo
+        hice a propósito, sé que pude hacerte sentir que no
+        estaba tomando en cuenta nuestro plan, y lo siento mucho.
+        No quiero que pienses que no me importa hablar contigo
+        o pasar tiempo contigo, porque sí me importa, muchísimo. 💗
+      </p>
 
-**Q: Why is the code in one file?**  
-A: For maximum portability! Download once, deploy anywhere, apologize instantly! ⚡
+      <p>
+        Y también quería pedirte perdón por lo de la hora en que
+        regresamos a tu casa, Marcita. 😭 Sé que tu mamá te llamó
+        un poquito la atención porque llegamos tarde, y de verdad
+        lo siento. No quería causarte problemas ni que te
+        regañaran por mi culpa. Si puedes, dile que también le
+        pido disculpas de corazón; la próxima vez voy a estar
+        más pendiente de la hora para que no vuelva a pasar. 💗
+      </p>
 
----
+      <p>
+        Y sí, todavía te debo esa partida de Roblox, jeje.
+        No me he olvidado; quiero que podamos jugar y reírnos
+        juntos, esta vez intentando no quedarme dormido en medio
+        del plan. Y obvio, ganarte en todas la partidas, botcita.
+      </p>
 
-## 🎨 Technical Details
+      <p>
+        También sigo ríendome de lo de ayer, de las alitas y
+        de la salsa BBQ. 😭 Yo intentando procesar la traición de
+        que mi pollo viniera con esa salsa, pidiendo que me
+        cambiaran el plato, y tú me das una papita con BBQ.
+      </p>
 
-### Built With
-- 💪 **Pure HTML/CSS/JavaScript** - No frameworks, no dependencies, no BS
-- 🎨 **CSS Animations** - Smooth, performant, beautiful
-- 📱 **Responsive Design** - Works on everything from Apple Watch to 4K monitors*
-- ♿ **Touch-Optimized** - Perfect for mobile devices
+      <p>
+        Pero tu risa hizo que ese momento se me quedara grabado
+        de una manera muy bonita. Me encanta verte reír, incluso
+        cuando te estás riendo de mi sufrimiento por una papita.
+        Hay momentos sencillos contigo que terminan significando
+        mucho para mí, y ese fue uno de ellos. ♡
+      </p>
 
-*Okay maybe not Apple Watch, but you get the idea!
+      <p>
+        Quiero que recuerdes algo, marcita: cuando te sientas
+        insegura o pienses que no eres bonita, ojalá pudieras
+        verte un ratito con mis ojos. Para mí eres hermosa,
+        inteligente y una persona a la que admiro muchísimo.
+        No te lo digo solo para hacerte sentir mejor; de verdad
+        lo pienso. Me gustas muchísimo, te adoro y te amo. 💕
+      </p>
 
-### Browser Support
-- ✅ Chrome/Edge (recommended)
-- ✅ Firefox
-- ✅ Safari (Desktop & Mobile)
-- ✅ Mobile browsers (tested on iOS & Android)
-- ❌ Internet Explorer (come on, really?)
+      <p>
+        Sé que el próximo año las cosas pueden cambiar y quizá
+        no podamos compartir el tiempo de la misma manera.
+        Por eso valoro tanto los ratitos que tenemos ahora.
+        No quiero presionarte ni nada; quiero que disfrutemos cuando
+        podamos hablar, jugar, reírnos y crear recuerdos bonitos.
+      </p>
 
----
+      <p>
+        No te voy a prometer que nunca volveré a quedarme
+        dormido sin querer, porque al parecer mi cuerpo tiene
+        pésimo sentido del momento. 😭 Pero sí quiero esforzarme
+        por avisarte mejor y cuidar los planes que hacemos,
+        porque tú y tu tiempo me importan.
+      </p>
 
-## 🌟 Star History
+      <p>
+        Te amo, Marcita. Eres mi princesa bonita, me encanta
+        compartir momentos contigo y me haces feliz de formas
+        muy sencillas, como con esa risa tuya que todavía tengo
+        en la cabeza. Gracias por los momentos bonitos, por tu
+        compañía y hasta por la papita con BBQ que casi acaba
+        conmigo. JAJAJA. 💗
+      </p>
 
-If this helped you get forgiven, smash that ⭐ button!
+      <p>
+        <strong>
+          Perdóname, marcita. ¿Me das otra oportunidad
+          de compensarte con nuestra partida de Roblox?
+        </strong>
+        🥺💖
+      </p>
+    </div>
 
-<div align="center">
+    <p>Hecho con muchísimo cariño, solo para ti, Marcita. ♡</p>
+    <button class="next" id="finishBtn">
+      Tengo algo más que decirte 💗
+    </button>
+  </section>
 
-### Show Some Love ❤️
+  <section id="final" class="hidden" aria-live="polite">
+    <div class="kitty">🐰💞</div>
+    <h1>Te amo, Marcita</h1>
 
-Made with 💖, ☕, and a lot of apologies
+    <p>
+      Gracias por ser tú, marcita. Ojalá nos queden
+      muchas más partidas, conversaciones, risas y recuerdos
+      juntos. Quiero seguir disfrutando de esos ratitos contigo
+      y hacer las cosas mejor. <3
+    </p>
 
-[⭐ Star this repo](../../stargazers) • [🍴 Fork it](../../fork) • [🐛 Report issues](../../issues)
+    <p>
+      <strong>Posdata:</strong> la próxima vez que vea salsa BBQ
+      voy a desconfiar de ella… aunque si tú me das otra papita,
+      probablemente vuelva a caer. 😭🍟
+    </p>
 
----
+    <div id="emojiContainer">💗 🐰 💕 🎮 💖</div>
+    <div class="small">Una paginita hecha con amor para Marcita ♡</div>
+  </section>
+</main>
 
-### 📜 License
+<script>
+const $ = id => document.getElementById(id);
 
-MIT License - Use it, customize it, deploy it, get forgiven! 
+const yesBtn = $('yesBtn');
+const noBtn = $('noBtn');
 
-Just remember: **This repo is not responsible for any apologies that still don't work.** Some things are beyond even our power! 😅
+const messages = [
+  '¿Me perdonas, Marcita? 🥺💗',
+  'Perdón, princesa dictadora. No quería dejarte esperando. 💕',
+  'Sí quería jugar contigo, de verdad. 😭🎮',
+  'Te debo una partida de Roblox, no me he olvidado.',
+  'Extraño esa risa tuya, incluso cuando te ríes de mí. 💗',
+  'Oye, te pasaste con esa papita BBQ 😭😭' ',
+  'Te amo y me importas muchísimo, marcita linda :33.',
+  '¿Me das una oportunidad para compensártelo? 🥺'
+];
 
----
+let count = 0;
+let msgIndex = 0;
 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Hearts.png" width="100" />
+function moveNo() {
+  const rect = noBtn.getBoundingClientRect();
+  const w = rect.width;
+  const h = rect.height;
+  const padding = 12;
 
-### *Go forth and apologize in style!* ✨
+  const maxX = Math.max(padding, innerWidth - w - padding);
+  const maxY = Math.max(padding, innerHeight - h - padding);
 
-**Made with love by someone who messes up a lot** 💕
+  noBtn.style.position = 'fixed';
+  noBtn.style.left =
+    (padding + Math.random() * (maxX - padding)) + 'px';
+  noBtn.style.top =
+    (padding + Math.random() * (maxY - padding)) + 'px';
+  noBtn.style.zIndex = 20;
 
-</div>
+  count++;
+  msgIndex = (msgIndex + 1) % messages.length;
+  $('mainText').textContent = messages[msgIndex];
 
----
+  $('clickCount').textContent =
+    count < 4
+      ? 'Prometo que esta disculpa viene con cariño.'
+      : count < 8
+      ? 'Marcita, hasta el botón sabe que quiero pedirte perdón. 😭'
+      : 'Está bien, te dejo leer mi carta con calma. 🥺';
 
-## 🎁 Bonus: Quick Deploy Commands
+  yesBtn.style.transform =
+    `scale(${Math.min(1.35, 1 + count * 0.035)})`;
 
-### Deploy to GitHub Pages
-```bash
-git init
-git add .
-git commit -m "💕 Initial commit - Time to apologize!"
-git branch -M main
-git remote add origin https://github.com/thiswasaryan/interactive-apology-page.git
-git push -u origin main
-```
+  for (let i = 0; i < 3; i++) {
+    setTimeout(createHeart, i * 100);
+  }
+}
 
-### Deploy to Vercel
-```bash
-npm i -g vercel
-vercel --prod
-```
+noBtn.addEventListener('pointerenter', moveNo);
 
-### Deploy to Netlify
-```bash
-npm i -g netlify-cli
-netlify deploy --prod --dir=.
-```
+noBtn.addEventListener('click', event => {
+  event.preventDefault();
+  moveNo();
+});
 
----
+noBtn.addEventListener('touchstart', event => {
+  event.preventDefault();
+  moveNo();
+}, { passive: false });
 
-<div align="center">
+function createHeart() {
+  const el = document.createElement('div');
+  el.className = 'heart';
 
-**Remember: The best apology is changed behavior... but this is a close second!** 😉
+  const hearts = ['💗', '💕', '💖', '♡', '✨'];
+  el.textContent = hearts[Math.floor(Math.random() * hearts.length)];
 
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=thiswasaryan.interactive-apology-page)
+  el.style.left = Math.random() * 100 + 'vw';
+  el.style.top = (65 + Math.random() * 30) + 'vh';
 
-</div>
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 3600);
+}
+
+function showSection(hideId, showId) {
+  $(hideId).classList.add('hidden');
+  $(showId).classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+yesBtn.addEventListener('click', () => {
+  showSection('ask', 'apology');
+  $('kitty').textContent = '🥹💗';
+
+  for (let i = 0; i < 18; i++) {
+    setTimeout(createHeart, i * 90);
+  }
+});
+
+$('finishBtn').addEventListener('click', () => {
+  showSection('apology', 'final');
+
+  for (let i = 0; i < 24; i++) {
+    setTimeout(createHeart, i * 80);
+  }
+});
+</script>
+
+</body>
+</html>
